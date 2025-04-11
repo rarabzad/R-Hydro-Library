@@ -177,11 +177,11 @@ FFA = function(Q, Years, title, breaks = 5, write.table = FALSE,
 	Qlog3 =  10^(mean(logQ) + kT_ob * sd(logQ))
 	
 	# Gumbel Method
-	gp = round(1 - ks.test(Q,Qgumb, alternative = 'two.sided', simulate.p.value = T)$p.value, 4)
+	gp = round(1 - ks.test(Q,Qgumb, alternative = 'two.sided', simulate.p.value = F)$p.value, 4)
 	# round(ks.test(Q,Qgumb, alternative = 'two.sided')$p.value, 4)
 	
 	# Log III Method
-	lp = round(1 - ks.test(Q,Qlog3, alternative = 'two.sided', simulate.p.value = T)$p.value, 4)
+	lp = round(1 - ks.test(Q,Qlog3, alternative = 'two.sided', simulate.p.value = F)$p.value, 4)
 	# round(ks.test(Q,Qlog3, alternative = 'two.sided')$p.value, 4)
 	
 	# Add Legend
